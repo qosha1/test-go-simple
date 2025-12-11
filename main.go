@@ -42,3 +42,4 @@ func handleHealth(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(health)
 }
 // Health check fix test - Thu Dec 11 14:51:42 PST 2025
+// ECS health check in task def - Thu Dec 11 15:24:11 PST 2025
