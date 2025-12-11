@@ -41,3 +41,4 @@ func handleHealth(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(health)
 }
+// Health check fix test - Thu Dec 11 14:51:42 PST 2025
