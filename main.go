@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"log"
 	"net/http"
+	"os"
 )
 
 type Response struct {
@@ -18,8 +19,12 @@ func main() {
 	http.HandleFunc("/", handleRoot)
 	http.HandleFunc("/health", handleHealth)
 
-	log.Println("Starting server on :8080")
-	if err := http.ListenAndServe(":8080", nil); err != nil {
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8000"
+	}
+	log.Printf("Starting server on :%s", port)
+	if err := http.ListenAndServe(":"+port, nil); err != nil {
 		log.Fatal(err)
 	}
 }
