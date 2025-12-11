@@ -1,0 +1,15 @@
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+app
+
+# Test binary
+*.test
+
+# Output
+*.out
+
+.DS_Store
